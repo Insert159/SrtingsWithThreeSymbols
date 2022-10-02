@@ -6,17 +6,18 @@ void showSmallArr()
 
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = Console.ReadLine();
+        arr[i] = Console.ReadLine() ?? "0";
     }
     Console.WriteLine("Массив заполнен");
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.WriteLine(arr[i]);
+        Console.Write(arr[i]+" ");
     }
+        Console.WriteLine();
         Console.WriteLine("Массив с тремя и менее символами:");
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.WriteLine(arr[i]);
+        if(arr[i].Length<4)Console.WriteLine(arr[i]);
     }
 }
 
